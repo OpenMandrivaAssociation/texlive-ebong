@@ -1,3 +1,9 @@
+# revision 20985
+# category Package
+# catalog-ctan /language/ebong
+# catalog-date 2007-03-06 00:44:08 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-ebong
 Version:	20070306
 Release:	1
@@ -45,6 +51,7 @@ program. All LaTeX markups are preserved in the target file.
 %doc %{_texmfdistdir}/doc/latex/ebong/eb.b
 %doc %{_texmfdistdir}/doc/latex/ebong/eb.pdf
 %doc %{_texmfdistdir}/doc/latex/ebong/eb_tex.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -59,3 +66,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
