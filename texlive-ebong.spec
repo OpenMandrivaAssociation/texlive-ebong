@@ -1,12 +1,12 @@
-# revision 20985
+# revision 26313
 # category Package
 # catalog-ctan /language/ebong
-# catalog-date 2007-03-06 00:44:08 +0100
+# catalog-date 2012-05-07 23:49:19 +0200
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-ebong
-Version:	20070306
-Release:	2
+Version:	20120507
+Release:	1
 Summary:	Utility for writing Bengali in Rapid Roman Format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/ebong
