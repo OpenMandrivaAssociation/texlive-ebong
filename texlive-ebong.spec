@@ -1,18 +1,12 @@
-# revision 26313
-# category Package
-# catalog-ctan /language/ebong
-# catalog-date 2012-05-07 23:49:19 +0200
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-ebong
-Version:	20190228
-Release:	2
+Version:	55475
+Release:	1
 Summary:	Utility for writing Bengali in Rapid Roman Format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/ebong
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ebong.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ebong.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ebong.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ebong.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ Roman Bangla and convert it to the bangtex format by a python
 program. All LaTeX markups are preserved in the target file.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,32 +39,14 @@ program. All LaTeX markups are preserved in the target file.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/ebong/ebong.py ebong
+ln -sf %{_texmfdistdir}/scripts/ebong/ebong.py ebong
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120507-1
-+ Revision: 812245
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070306-2
-+ Revision: 751284
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070306-1
-+ Revision: 718296
-- texlive-ebong
-- texlive-ebong
-- texlive-ebong
-- texlive-ebong
-
