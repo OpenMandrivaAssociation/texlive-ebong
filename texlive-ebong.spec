@@ -1,6 +1,6 @@
 Name:		texlive-ebong
-Version:	55475
-Release:	2
+Version:	67933
+Release:	1
 Summary:	Utility for writing Bengali in Rapid Roman Format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/ebong
