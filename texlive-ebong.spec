@@ -3,7 +3,7 @@ Version:	67933
 Release:	1
 Summary:	Utility for writing Bengali in Rapid Roman Format
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/ebong
+URL:		https://www.ctan.org/tex-archive/language/ebong
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ebong.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ebong.doc.r%{version}.tar.xz
